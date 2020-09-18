@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, 
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  background: url('img/bg_1.jpg') no-repeat center center / cover;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  z-index: 1;
+}
+
+nav .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+nav .menu {
+  display: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 3rem;
+  padding: .5rem 0;
+  text-transform: uppercase;
+  transition: color 1s ease;
+}
+
+nav ul li a:hover {
+  color: #FF8C00;
+  border-bottom: 3px solid #FF8C00;
+}
+
+.header-info {
+  margin-top: 8rem;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-info .header-title {
+  align-self: flex-start;
+  padding-right: 2rem;
+  max-width: 50rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header-info .links {
+  align-self: flex-end;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #fff;
+  margin-left: 1.5rem;
+  transition: .5s ease;
+}
+
+.btn-primary, .btn-secondary:hover {
+  background-color: #FF8C00;
+}
+
+.btn-secondary, .btn-primary:hover {
+  background-color: transparent;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: scale(.95);
+}
+
+@media(max-width: 1200px) {
+  .header-info {
+    margin-top: 6rem;
+  }
+
+  .header-info .header-title, 
+  .header-info .links  {
+    padding: 0 2rem;
+    text-align: center;
+    align-self: center;
+    margin: 1rem 2rem;
+  }
+}
+
+@media(max-width: 768px) {
+  .header-info {
+    margin-top: 3rem;
+    padding: 2rem 0;
+  }
+
+  nav .logo {
+    font-size: 1.5rem;
+  }
+
+  nav .menu img {
+    width: 20px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav .menu {
+    display: block;
+  }
+
+  .header-info .header-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    margin: 1rem;
+  }
+}
+
+@media(max-width: 480px) {
+  .header-info .header-title {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .header-info .links {
+    padding: 0;
+  }
+
+  .btn {
+    padding: .8rem 2.2rem;
+    font-size: .9rem;
+  }
+}
